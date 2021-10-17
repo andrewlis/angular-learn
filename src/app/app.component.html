@@ -1,12 +1,2 @@
-<div
-  (mousemove)="onMouseMove($event)"
-  (mouseup)="onMouseUp($event)"
-  (mousedown)="onMouseDown($event)">
-  <app-box
-    *ngFor="let box of boxes"
-    [x]="box.x"
-    [y]="box.y"
-    [num]="box.num"
-    [selected]="box.num === currentBox?.num"
-  ></app-box>
-</div>
+<app-header></app-header>
+<router-outlet></router-outlet>

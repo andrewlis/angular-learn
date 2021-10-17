@@ -1,0 +1,23 @@
+:host {
+  .header {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    button {
+      cursor: pointer;
+      padding: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: aquamarine;
+      color: rgb(36, 35, 35);
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      &.active {
+          background-color: aqua;
+      }
+      &:hover {
+        box-shadow: 2px 4px 10px 1px #d7d2d2;
+      }
+    }
+  }
+}
