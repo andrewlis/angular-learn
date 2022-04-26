@@ -1,0 +1,18 @@
+<div>
+  <h3>Names</h3>
+  <ng-container *ngIf="(worlds$ | async ) as worlds">
+    <ng-container *ngIf="worlds.length; else notAddedNames">
+      <ul *ngFor="let world of (worlds$ | async)">
+        <li>{{world.name}}</li>
+        <button (click)="delete(world.id)">X</button>
+      </ul>
+    </ng-container>
+    <ng-template #notAddedNames>
+      Добавьте имена чтобы они появились в списке
+    </ng-template>
+  </ng-container>
+  <h4>Добавление имени</h4>
+  <input type="text" [formControl]="nameControl">
+  <button (click)="addName()">Add Name</button>
+  <button (click)="refresh()">Refresh</button>
+</div>
