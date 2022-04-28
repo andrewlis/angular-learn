@@ -1,7 +1,6 @@
 :host {
-  .header {
-    padding: 0 20px;
-    margin-bottom: 20px;
+  header {
+    padding: 20px 0;
 
     button {
       cursor: pointer;
@@ -23,5 +22,6 @@
         box-shadow: 2px 4px 10px 1px #d7d2d2;
       }
     }
+
   }
 }

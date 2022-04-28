@@ -8,14 +8,13 @@ import { BoxComponent } from './box/box.component';
 })
 export class BoxWrapperComponent implements OnInit {
 
-  public currentBox!: BoxComponent | null;
-  public offsetY!: number;
-  public offsetX!: number;
+  public currentBox: BoxComponent | null;
+  public offsetY: number;
+  public offsetX: number;
   public boxes: Array<any> = [];
   public size: number = 10000;
 
   constructor(private cdr: ChangeDetectorRef) {
-
   }
 
   ngAfterViewInit(): void {

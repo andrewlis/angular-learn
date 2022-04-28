@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StoreShakerComponent } from "./components/store-shaker/store-shaker.component";
 import { WebsocketShakerComponent } from "./components/websocket-shaker/websocket-shaker.component";
 import { WelcomeComponent } from "./components/welcome/welcome.component";
+import { CardWrapperComponent } from "./components/card-wrapper/card-wrapper.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'websocket-shaker',
     component: WebsocketShakerComponent
+  },
+  {
+    path: 'cards',
+    component: CardWrapperComponent
   },
   {
     path: '**',

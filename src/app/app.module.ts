@@ -13,6 +13,10 @@ import { WebsocketShakerComponent } from './components/websocket-shaker/websocke
 import { SocketIoModule } from "ngx-socket-io";
 import { WEBSOCKET_CONFIG } from "./services/websockets/constants/websocket.config.const";
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { CardWrapperComponent } from './components/card-wrapper/card-wrapper.component';
+import { CardComponent } from './components/card-wrapper/card/card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     HeaderComponent,
     StoreShakerComponent,
     WebsocketShakerComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    CardWrapperComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +38,9 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
       ),
     SocketIoModule.forRoot(WEBSOCKET_CONFIG),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
