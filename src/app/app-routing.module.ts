@@ -1,36 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StoreShakerComponent } from "./components/store-shaker/store-shaker.component";
-import { WebsocketShakerComponent } from "./components/websocket-shaker/websocket-shaker.component";
-import { WelcomeComponent } from "./components/welcome/welcome.component";
-import { CardWrapperComponent } from "./components/card-wrapper/card-wrapper.component";
+import { AuthGuard } from "./guards/auth/auth.guard";
+import { LoginComponent } from "./components/unauthorized/login/login.component";
 
 const routes: Routes = [
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
     path: '',
-    component: WelcomeComponent,
-    pathMatch: 'full'
+    loadChildren: () => import('./components/authorized/authorized.module').then(m => m.AuthorizedModule),
+    canActivate: [AuthGuard]
   },
-  {
-    path: 'change-detection',
-    loadChildren: () => import('./components/change-detection/change-detection.module').then(m => m.ChangeDetectionModule),
-  },
-  {
-    path: 'state-shaker',
-    component: StoreShakerComponent
-  },
-  {
-    path: 'websocket-shaker',
-    component: WebsocketShakerComponent
-  },
-  {
-    path: 'cards',
-    component: CardWrapperComponent
-  },
-  {
-    path: '**',
-    component: WelcomeComponent
-  }
 ];
 
 @NgModule({

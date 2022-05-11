@@ -3,30 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { NgxsModule } from "@ngxs/store";
-import { StoreShakerComponent } from './components/store-shaker/store-shaker.component';
 import { WorldsState } from "./states/worlds/worlds.state";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
-import { WebsocketShakerComponent } from './components/websocket-shaker/websocket-shaker.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { SocketIoModule } from "ngx-socket-io";
 import { WEBSOCKET_CONFIG } from "./services/websockets/constants/websocket.config.const";
-import { WelcomeComponent } from './components/welcome/welcome.component';
-import { CardWrapperComponent } from './components/card-wrapper/card-wrapper.component';
-import { CardComponent } from './components/card-wrapper/card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/unauthorized/login/login.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { AuthState } from './states/auth/auth.state';
+import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    StoreShakerComponent,
-    WebsocketShakerComponent,
-    WelcomeComponent,
-    CardWrapperComponent,
-    CardComponent
+    LoginComponent
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
   ],
   imports: [
     BrowserModule,
@@ -34,12 +33,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     NgxsModule
       .forRoot(
-        [WorldsState]
+        [
+          AuthState,
+          WorldsState,
+        ]
       ),
+    NgxsRouterPluginModule.forRoot(),
     SocketIoModule.forRoot(WEBSOCKET_CONFIG),
-    ReactiveFormsModule,
-    FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
 })

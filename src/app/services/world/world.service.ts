@@ -11,14 +11,14 @@ export class WorldService {
   }
 
   public getNames(): Observable<IWorld[]> {
-    return this.http.get<IWorld[]>('world')
+    return this.http.get<IWorld[]>('api/world')
   }
 
   public addNew(data: IWorld): any {
-    return this.http.post('world', data)
+    return this.http.post('api/world', data)
   }
 
   public delete(id: number): any {
-    return this.http.delete('world/' + id)
+    return this.http.delete('api/world/' + id)
   }
 }

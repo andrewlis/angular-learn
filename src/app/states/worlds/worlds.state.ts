@@ -6,7 +6,7 @@ import { catchError, tap } from "rxjs/operators";
 import { IWorld } from "../../services/world/interfaces/world.interface";
 import { throwError } from "rxjs";
 import { IWorldsModel } from "./worlds-model.interface";
-import { WORLDS_DEFAULTS } from "./worlds-defaoults.const";
+import { WORLDS_DEFAULTS } from "./worlds-defaults.const";
 
 @State<IWorldsModel>({
   name: 'worlds',

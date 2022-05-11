@@ -1,0 +1,49 @@
+:host {
+  .login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      flex-basis: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      input {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 2px solid gray;
+        outline: none;
+        padding: 5px 20px;
+        font-size: 16px;
+        transition: 0.2s;
+
+        &.ng-invalid.ng-touched {
+          border-color: #fa4343
+        }
+
+        &:hover {
+          border-color: #484848;
+        }
+      }
+
+      button {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        padding: 10px 20px;
+        border-bottom: 2px solid gray;
+        transition: 0.2s;
+
+        &:hover {
+
+          border-color: #484848;
+          box-shadow: 2px 4px 4px 0 #d7d2d2;
+        }
+      }
+    }
+  }
+}

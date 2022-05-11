@@ -1,8 +1,11 @@
 {
-  "/world": {
+  "/api": {
     "target": "http://localhost:3000",
     "secure": false,
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/": ""
+    }
   },
   "/websockets": {
     "target": "http://localhost:80",

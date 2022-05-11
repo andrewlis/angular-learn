@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Select, Store } from "@ngxs/store";
-import { Worlds } from "../../states/worlds/worlds.actions";
-import { WorldsState } from "../../states/worlds/worlds.state";
+import { Worlds } from "../../../states/worlds/worlds.actions";
+import { WorldsState } from "../../../states/worlds/worlds.state";
 import { Observable } from "rxjs";
 import { FormBuilder, FormControl } from "@angular/forms";
-import { IWorld } from "../../services/world/interfaces/world.interface";
+import { IWorld } from "../../../services/world/interfaces/world.interface";
 
 @Component({
   selector: 'app-store-shaker',

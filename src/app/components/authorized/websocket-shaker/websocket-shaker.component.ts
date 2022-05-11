@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WebsocketService } from '../../services/websockets/websocket.service'
+import { WebsocketService } from '../../../services/websockets/websocket.service'
 import { tap } from "rxjs/operators";
 
 @Component({
