@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'my-lib',
+  selector: 'ui-kit',
   template: `
     <p>
       my-lib works!

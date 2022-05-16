@@ -1,0 +1,23 @@
+@import "../variables/container.variable";
+@import "../variables/padding.variable";
+
+@mixin container-padding($bp) {
+  @if $bp != sm {
+    padding: map-get($paddings, lg)
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: map-get($paddings, sm);
+
+  @each $bp, $width in $container-max-widths {
+    @media (min-width: $width) {
+      max-width: $width;
+      @include container-padding($bp);
+    }
+  }
+}

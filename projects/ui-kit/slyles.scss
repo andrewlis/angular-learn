@@ -1,0 +1,33 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$paddings: (
+  sm: 0 10px,
+  lg: 0 20px,
+);
+
+@mixin container-padding($bp) {
+  @if $bp != sm {
+    padding: map-get($paddings, lg)
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: map-get($paddings, sm);
+
+  @each $bp, $width in $container-max-widths {
+    @media (min-width: $width) {
+      max-width: $width;
+      @include container-padding($bp);
+    }
+  }
+}

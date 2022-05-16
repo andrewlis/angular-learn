@@ -1,6 +1,8 @@
 {
-  "name": "my-lib",
+  "name": "ui-kit",
   "version": "0.0.1",
+  "license": "MIT",
+  "author": "Andrew Lisin",
   "peerDependencies": {
     "@angular/common": "^12.1.0-",
     "@angular/core": "^12.1.0-"

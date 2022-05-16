@@ -10,7 +10,7 @@ import { CardWrapperComponent } from "./card-wrapper/card-wrapper.component";
 import { CardComponent } from "./card-wrapper/card/card.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthorizedWrapperComponent } from './authorized-wrapper/authorized-wrapper.component';
-import { MyLibModule } from 'my-lib';
+import { MyLibModule } from 'ui-kit';
 
 @NgModule({
   declarations: [

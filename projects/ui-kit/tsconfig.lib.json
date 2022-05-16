@@ -13,6 +13,9 @@
       "es2018"
     ]
   },
+  "angularCompilerOptions": {
+    "enableIvy": true
+  },
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"

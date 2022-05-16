@@ -1,30 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~normalize.css";
-@import "assets/styles/_variables";
+@import "ui-kit/slyles";
 
 body {
   min-height: 100vh;
   display: flex;
   justify-content: stretch;
-}
-
-@mixin container-padding($bp) {
-  @if $bp != sm {
-    padding: map-get($paddings, lg)
-  }
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: map-get($paddings, sm);
-
-  @each $bp, $width in $container-max-widths {
-    @media (min-width: $width) {
-      max-width: $width;
-      @include container-padding($bp);
-    }
-  }
 }
