@@ -1,5 +1,5 @@
 <app-card
-  *ngFor="let card of cards"
+  *ngFor="let card of cards$ | async"
   [image]="card.image"
   [title]="card.title"
   [subtitle]="card.subtitle"
