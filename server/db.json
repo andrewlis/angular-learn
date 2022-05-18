@@ -1,0 +1,38 @@
+{
+  "login": {
+      "access_token": "testToken"
+  },
+  "world": [
+    {
+      "id": 1,
+      "name": "string",
+      "population": 1,
+      "lifeBase": "carbon"
+    }
+  ],
+  "cards": [
+    {
+      "image": "./assets/pug.jpg",
+      "title": "lorem",
+      "subtitle": "string ",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum iste mollitia neque rerum?"
+    },
+    {
+      "image": "./assets/pug.jpg",
+      "title": "string2",
+      "subtitle": "string2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum iste mollitia neque rerum?"
+    },   {
+      "image": "./assets/pug.jpg",
+      "title": "string3",
+      "subtitle": "string3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum iste mollitia neque rerum?"
+    },
+    {
+      "image": "./assets/pug.jpg",
+      "title": "string4",
+      "subtitle": "string4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum iste mollitia neque rerum?"
+    }
+  ]
+}

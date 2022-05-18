@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { AuthState } from './states/auth/auth.state';
 import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxsStoragePluginModule.forRoot(),
     NgxsModule
       .forRoot(
         [
