@@ -5,12 +5,18 @@
       placeholder="enter your email"
       formControlName="username"
     >
+    <app-error-handler
+      [control]="loginForm.get('username')"
+    ></app-error-handler>
 <!--    todo password directive which toggle pwd visibility && error directive-->
     <input
       type="password"
       placeholder="password"
       formControlName="password"
     >
+    <app-error-handler
+      [control]="loginForm.get('password')"
+    ></app-error-handler>
     <button>Submit</button>
   </form>
 </div>

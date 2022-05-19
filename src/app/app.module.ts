@@ -15,7 +15,8 @@ import { AuthState } from './states/auth/auth.state';
 import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
-
+import { ErrorHandlerComponent } from './components/shared/error-handler/error-handler.component';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
     NgxsRouterPluginModule.forRoot(),
     SocketIoModule.forRoot(WEBSOCKET_CONFIG),
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   bootstrap: [AppComponent]
 })

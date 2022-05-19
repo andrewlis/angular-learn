@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.loginForm = this.fb.group({
-      username: ['john@mail.ru', [Validators.required, Validators.email]],
-      password: ['changeme', Validators.required],
+      username: ['', [Validators.required, Validators.email, Validators.minLength(5)]],
+      password: ['', Validators.required],
     })
   }
 
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.loginForm.markAllAsTouched();
     if (this.loginForm.valid) {
       this.store.dispatch(new Auth.Login(this.loginForm.value))
     }
