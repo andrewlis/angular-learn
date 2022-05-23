@@ -1,22 +1,26 @@
 <div class="login">
   <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <input
-      type="text"
-      placeholder="enter your email"
-      formControlName="username"
-    >
-    <app-error-handler
-      [control]="loginForm.get('username')"
-    ></app-error-handler>
+    <div class="form-control">
+      <input
+        type="text"
+        placeholder="enter your email"
+        formControlName="username"
+      >
+      <app-error-handler
+        [controlErrors]="loginForm.get('username')?.errors"
+      ></app-error-handler>
+    </div>
 <!--    todo password directive which toggle pwd visibility && error directive-->
-    <input
-      type="password"
-      placeholder="password"
-      formControlName="password"
-    >
-    <app-error-handler
-      [control]="loginForm.get('password')"
-    ></app-error-handler>
+    <div class="form-control">
+      <input
+        type="password"
+        placeholder="password"
+        formControlName="password"
+      >
+      <app-error-handler
+        [controlErrors]="loginForm.get('password')?.errors"
+      ></app-error-handler>
+    </div>
     <button>Submit</button>
   </form>
 </div>
