@@ -1,0 +1,5 @@
+// для переключения на скачивание пакетов с локального репозитория verdaccio
+// npm set registry http://localhost:4873
+
+// для переключения на скачивание пакетов с npm
+// npm set registry http://registry.npmjs.org/

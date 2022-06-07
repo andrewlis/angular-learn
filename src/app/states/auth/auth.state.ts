@@ -32,6 +32,7 @@ export class AuthState {
           }
         ));
       }),
+      tap(() => ctx.dispatch(new Navigate(['']))),
       catchError(err => {
         throw new Error()
       })
