@@ -41,6 +41,6 @@ export class AuthState {
   @Action(Auth.Logout)
   logout(ctx: StateContext<IAuthModel>, action: Auth.Logout) {
     ctx.setState(AUTH_DEFAULTS);
-    ctx.dispatch(new Navigate(['/login']))
+    ctx.dispatch(new Navigate(['/login']));
   }
 }
