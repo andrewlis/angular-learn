@@ -26,6 +26,7 @@ export class AuthState {
   login(ctx: StateContext<IAuthModel>, action: Auth.Login) {
     return this.service.login(action.user).pipe(
       tap(payload => {
+        console.warn(payload);
         return ctx.setState(
           patch({
             token: payload.access_token
@@ -41,6 +42,6 @@ export class AuthState {
   @Action(Auth.Logout)
   logout(ctx: StateContext<IAuthModel>, action: Auth.Logout) {
     ctx.setState(AUTH_DEFAULTS);
-    ctx.dispatch(new Navigate(['/login']));
+    ctx.dispatch(new Navigate(['/login']))
   }
 }
