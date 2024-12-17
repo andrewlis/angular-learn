@@ -5,6 +5,7 @@ import { StoreShakerComponent } from "./store-shaker/store-shaker.component";
 import { WebsocketShakerComponent } from "./websocket-shaker/websocket-shaker.component";
 import { CardWrapperComponent } from "./card-wrapper/card-wrapper.component";
 import { AuthorizedWrapperComponent } from "./authorized-wrapper/authorized-wrapper.component";
+import { DailyExpensesComponent } from './daily-expenses/daily-expenses.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'cards',
         component: CardWrapperComponent
+      },
+      {
+        path: 'daily-expenses',
+        component: DailyExpensesComponent,
       },
       {
         path: '**',

@@ -11,6 +11,7 @@ import { CardComponent } from "./card-wrapper/card/card.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthorizedWrapperComponent } from './authorized-wrapper/authorized-wrapper.component';
 import { MyLibModule } from 'ui-kit';
+import { DailyExpensesComponent } from './daily-expenses/daily-expenses.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MyLibModule } from 'ui-kit';
     WelcomeComponent,
     CardWrapperComponent,
     CardComponent,
-    AuthorizedWrapperComponent
+    AuthorizedWrapperComponent,
+    DailyExpensesComponent
   ],
   imports: [
     CommonModule,
